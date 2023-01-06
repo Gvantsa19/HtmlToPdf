@@ -42,7 +42,7 @@
           "dependencies": {
             "Syncfusion.HtmlToPdfConverter.Net.Windows": {
               "target": "Package",
-              "version": "[20.4.0.42, )"
+              "version": "[20.4.0.40, )"
             }
           },
           "imports": [
