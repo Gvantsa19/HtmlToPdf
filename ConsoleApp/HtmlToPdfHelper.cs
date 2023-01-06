@@ -4,9 +4,9 @@ using Syncfusion.Pdf;
 
 namespace ConsoleApp
 {
-    public class HtmlToPdfHelper
+    public static class HtmlToPdfHelper
     {
-        public void PdfSharpConvert(string html)
+        public static void PdfSharpConvert(string html)
         {
             HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
 
