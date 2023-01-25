@@ -1,13 +1,19 @@
 ﻿
 using PdfBuilder;
 using Syncfusion.Drawing;
-using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Grid;
 
-PDFBuilder builder = new PDFBuilder();
+//PDFBuilder builder = new PDFBuilder();
+//builder.WithHeader("", 0, 0)
+//       .WithContent("", 0, 50)
+//       .WithFont(new PdfStandardFont(PdfFontFamily.Helvetica, 14))
+//       .WithFontColor(Color.Red)
+//       .Save("htmltopdf.pdf");
+
+Builder builder = new Builder();
 builder.WithHeader("", 0, 0)
-       .WithContent("", 0, 50)
-       .WithFont(new PdfStandardFont(PdfFontFamily.Helvetica, 14))
-       .WithFontColor(Color.Red)
-       .Save("htmltopdf.pdf");
+        .WithFont(new PdfStandardFont(PdfFontFamily.Helvetica, 14))
+        .WithFontColor(Color.Red);
+Wrapper wrapper = builder.Build();
+wrapper.AddPage("", 0, 0);
+wrapper.Save("html.pdf");
